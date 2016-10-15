@@ -9,6 +9,16 @@
   </head>
 
   <body>
+    <nav>
+      <div id= "categories" class="drop-down">
+        <button class="drop-button">Categories</button>
+        <div class="drop-down-content">
+          <% @categories.each do |category| %>
+            <%= link_to category.name, category_path(category) %>
+          <% end %>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
