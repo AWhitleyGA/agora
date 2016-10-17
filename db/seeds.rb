@@ -13,9 +13,10 @@ Category.create([
   {name: "Electronics", img_url: "electronics.png", description: "televisions, phones, speakers, headphones"},
   {name: "Clothing", img_url: "clothing.png", description: "shirts, pants, skirts, outerwear, accessories"},
   {name: "Shoes, Belts, and Accessories", img_url: "shoes.png", description: "men's and women's shoes, belts, watches, jewelrey, bags"},
-  {name: "Home", img_url: "home.png", description: "furniture, appliances, decorations, lights, outdoor"},
+  {name: "Home and Outdoors", img_url: "home.png", description: "furniture, appliances, decorations, lights, outdoor"},
   {name: "Media", img_url: "media.png", description: "movies, games, books, music"},
   {name: "Sports", img_url: "sports.png", description: "training gear, equipment, balls, sports apparel"},
+  {name: "Miscellaneous", img_url: "miscellaneous.png", description: "Miscellaneous products, services, and offers"}
 ])
 
 Product.create([

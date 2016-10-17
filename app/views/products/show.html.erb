@@ -1,0 +1,15 @@
+
+<div class="product-show">
+  <div class="product-banner" style="background: url('<%= image_path(@product.img_url) %>');background-size: contain; background-repeat: no-repeat; background-position: center">
+  </div>
+  <div class="product-info">
+    <h3><%= @product.name %></h3>
+    <p class="description"><%= @product.description %></p>
+    <p class="price">$<%= @product.price %></p>
+    <button>Add to Cart</button>
+    <div class="seller-info">
+      <p>Seller: USERNAME</p>
+      <p>Email: EMAIL </p>
+    </div>
+  </div>
+</div>

@@ -18,9 +18,7 @@
           <% end %>
         </div>
       </div>
-      <div class="agora-logo">
-        <h1>AGORA</h1>
-      </div>
+      <a class="agora-logo" href="<%= root_path %>">AGORA</a>
       <div id= "account" class="drop-down">
         <button class="drop-button">Account</button>
         <div class="drop-down-content">
@@ -30,6 +28,8 @@
         </div>
       </div>
     </nav>
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

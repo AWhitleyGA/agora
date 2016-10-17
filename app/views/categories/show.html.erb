@@ -1,0 +1,19 @@
+<section class="category-banner">
+  <div class="category-info">
+    <h3><%= @category.name %></h3>
+    <p><%= @category.description %></p>
+  </div>
+  <div class="category-image" style="background: url('<%= image_path(@category.img_url) %>');background-size: auto 100%; background-repeat: no-repeat; background-position: center">
+  </div>
+
+</section>
+<section class="product-gallery">
+  <% @category.products.each do |product| %>
+    <a class="product-listing" href="<%= category_product_path(@category, product) %>">
+      <h3><%= product.name %></h3>
+      <div class="product-image" style="background: url('<%= image_path(product.img_url) %>'); background-size: contain; background-repeat: no-repeat; background-position: center">
+      </div>
+      <p> <%= product.price %> </p>
+    </a>
+  <% end %>
+</section>

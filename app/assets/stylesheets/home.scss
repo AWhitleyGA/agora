@@ -1,11 +1,17 @@
+main {
+  padding-top: 70px;
+  width: 1100px;
+  min-height: 650px;
+  margin: auto;
+}
 nav {
   background: black;
   position: fixed;
   width: 100vw;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 nav > div{
   display: block;
@@ -13,6 +19,8 @@ nav > div{
 }
 .agora-logo {
   font-size: 3.0em;
+  color: white;
+  text-decoration: none;
 }
 .drop-button {
   display: block;
