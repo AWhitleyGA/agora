@@ -8,10 +8,21 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class = "<%= params[:controller] %>">
     <nav>
       <div id= "categories" class="drop-down">
         <button class="drop-button">Categories</button>
+        <div class="drop-down-content">
+          <% @categories.each do |category| %>
+            <%= link_to category.name, category_path(category) %>
+          <% end %>
+        </div>
+      </div>
+      <div class="agora-logo">
+        <h1>AGORA</h1>
+      </div>
+      <div id= "account" class="drop-down">
+        <button class="drop-button">Account</button>
         <div class="drop-down-content">
           <% @categories.each do |category| %>
             <%= link_to category.name, category_path(category) %>

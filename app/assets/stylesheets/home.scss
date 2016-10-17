@@ -1,0 +1,41 @@
+nav {
+  background: black;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+nav > div{
+  display: block;
+  color: white;
+}
+.agora-logo {
+  font-size: 3.0em;
+}
+.drop-button {
+  display: block;
+  background: black;
+  color: white;
+  font-size: 1.5em;
+  border: none;
+  outline: none;
+}
+.drop-down-content {
+  background: black;
+  display: none;
+  position: absolute;
+}
+.drop-down-content a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 20px 20px;
+}
+.drop-down-content a:hover {
+  display: block;
+  text-decoration: none;
+  color: red;
+  padding: 20px 20px;
+}
