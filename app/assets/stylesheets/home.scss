@@ -29,18 +29,23 @@ nav > div{
   font-size: 1.5em;
   border: none;
   outline: none;
-  margin: 0 20px;
+  padding: 0 20px;
+  width: 150px;
 }
 .drop-down-content {
   background: black;
   display: none;
   position: absolute;
 }
+#account .drop-down-content {
+  right: 0;
+}
 .drop-down-content a {
   display: block;
   text-decoration: none;
   color: white;
   padding: 20px 20px;
+  width: 150px;
 }
 .drop-down-content a:hover {
   display: block;
