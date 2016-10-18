@@ -54,5 +54,11 @@
       text-decoration: underline;
       font-weight: bold;
     }
+    p {
+      span {
+        display: inline-block;
+        width: 100px;
+      }
+    }
   }
 }
