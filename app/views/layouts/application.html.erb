@@ -23,7 +23,7 @@
         <button class="drop-button">Account</button>
         <div class="drop-down-content">
           <% if current_user %>
-            <%= link_to "My Account", "/account" %>
+            <%= link_to "My Account", user_path(current_user) %>
             <%= link_to "Cart (#{current_user.cart.length})", "/cart" %>
             <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
           <% else %>

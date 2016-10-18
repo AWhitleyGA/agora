@@ -1,0 +1,57 @@
+.user-info {
+  display: flex;
+  justify-content: space-around;
+  background: pink;
+  margin-top: 40px;
+  h2 {
+    font-size: 1.4em;
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+  div {
+    width: 200px;
+    margin: 40px 0;
+    line-height: 20px;
+    span {
+      display: inline-block;
+      width: 100px;
+    }
+  }
+  div:first-child {
+    width: 300px;
+  }
+}
+
+.user-listings {
+  height: 250px;
+  background: pink;
+  overflow: scroll;
+  display: flex;
+  margin-top: 40px;
+  a {
+    text-decoration: none;
+    color: black;
+    h3 {
+      text-align: center;
+      padding: 0 20px;
+      height: 30%;
+      display: flex;
+      align-items: center;
+    }
+    .listing-image {
+      height: 50%;
+      width: 220px;
+    }
+    p {
+      height: 20%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  a:hover {
+    color: red;
+  }
+}

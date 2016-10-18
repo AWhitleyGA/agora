@@ -1,0 +1,33 @@
+<div class="user-info">
+  <div>
+    <h2>Account Information</h2>
+    <p><span>Username: </span> <%= current_user.username %></p>
+    <p><span>Name: </span> <%= current_user.first_name %> <%= current_user.last_name %></p>
+    <p><span>Email: </span> <%= current_user.email %></p>
+    <p><span>Phone: </span> <%= current_user.phone_number %></p>
+  </div>
+  <div>
+    <h2>Billing Address</h2>
+    <p><%= current_user.first_name %> <%= current_user.last_name %></p>
+    <p><%= current_user.billing_address_1 %></p>
+    <p><%= current_user.billing_address_2 %></p>
+  </div>
+  <div>
+    <h2>Mailing Address</h2>
+    <p><%= current_user.first_name %> <%= current_user.last_name %></p>
+    <p><%= current_user.mailing_address_1 %></p>
+    <p><%= current_user.mailing_address_2 %></p>
+  </div>
+</div>
+<%= link_to "Edit Information", edit_user_path(current_user) %>
+<div class="user-listings">
+  <% current_user.products.each do |product| %>
+  <a href="<%= user_product_path(current_user, product) %>">
+    <h3><%= product.name %></h3>
+    <div class="listing-image" style="background: url('<%= image_path(product.img_url) %>'); background-size:contain; background-repeat: no-repeat; background-position: center;">
+    </div>
+    <p><%= product.price %></p>
+  </a>
+  <% end %>
+</div>
+<%= link_to "New Listing", new_user_product_path(current_user) %>
