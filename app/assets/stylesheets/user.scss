@@ -107,3 +107,36 @@
   background: url('log-in-banner.jpg');
   background-size: cover;
 }
+
+.sign-up-wallpaper {
+  height: 600px;
+  margin-top: 40px;
+  background: url('sign-up-banner.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-up-page {
+  height: 400px;
+  width: 70%;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  h2 {
+    margin: 30px 0;
+    font-size: 2.4em;
+    text-decoration: underline;
+  }
+  form {
+    text-align: right;
+    width: 450px;
+    #user_username, #user_email, #user_password, #user_password_confirmation {
+      width: 200px;
+      height: 20px;
+      margin: 10px 0;
+    }
+  }
+}
