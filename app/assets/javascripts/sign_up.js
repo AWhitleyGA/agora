@@ -15,6 +15,7 @@ $(document).ready(function() {
   $('#next_2').on('click', function(){
     $('.sign-up-form-2').hide()
     $('.sign-up-form-3').show()
+    $('#submit').prop('disabled', false)
   })
 
 

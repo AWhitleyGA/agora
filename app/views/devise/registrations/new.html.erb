@@ -52,7 +52,7 @@
           <%= f.text_field :mailing_address_2, autofocus: true, class: "form_field", placeholder: "City, State ZIP" %>
         </div>
         <div class="actions">
-          <%= f.submit "Sign up", class: "form_button bottom_center" %>
+          <%= f.submit "Sign up", class: "form_button bottom_center", id: "submit", disabled: true %>
         </div>
       </div>
       <% end %>
