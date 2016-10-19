@@ -1,3 +1,4 @@
+<h1>Account</h1>
 <div class="user-info">
   <div>
     <h2>Account Information</h2>
@@ -19,7 +20,8 @@
     <p><%= current_user.mailing_address_2 %></p>
   </div>
 </div>
-<%= link_to "Edit Information", edit_user_path(current_user) %>
+<%= link_to "Edit Information", edit_user_registration_path(current_user) %>
+<h1>Current Listings</h1>
 <div class="user-listings">
   <% current_user.products.each do |product| %>
   <a href="<%= user_product_path(current_user, product) %>">
