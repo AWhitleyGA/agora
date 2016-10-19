@@ -13,7 +13,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :billing_address_2,  null: false, default: ""
       t.string :mailing_address_1,  null: false, default: ""
       t.string :mailing_address_2,  null: false, default: ""
-      t.integer :cart, array: true, null: false, default: '{}'
+      t.string :cart, array: true, null: false, default: '{}'
 
       ## Recoverable
       t.string   :reset_password_token

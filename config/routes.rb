@@ -11,8 +11,9 @@ resources :categories do
 end
 
 
-get "/account" => "users#account"
+get "/account" => "users#show"
 get "/cart" => "users#cart"
+post "/cart" => "users#add_to_cart"
 root "home#index"
 
 end

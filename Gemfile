@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#Pry for troubleshooting
+gem 'pry'
 # Use Devise for User Authentication
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

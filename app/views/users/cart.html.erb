@@ -1,0 +1,27 @@
+<h1>Cart</h1>
+<div class="cart">
+  <div class="cart-products-gallery">
+    <% @products.each do |product| %>
+      <a href="<%= category_product_path(product.categories.first, product) %>" class="cart-product">
+        <div class="cart-product-image" style="background: url('<%= image_path(product.img_url) %>'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+        </div>
+        <div class="cart-product-info">
+          <h4><%= product.name %></h4>
+          <p><%= product.description %></p>
+        </div>
+        <div class="cart-product-price">
+          <h4>$<%= product.price %></h4>
+        </div>
+      </a>
+    <% end %>
+  </div>
+  <div class="cart-info">
+    <h2>Cart Total:</h2>
+    <p><%= number_to_currency(@cart_total) %></p>
+
+    <%= form_tag("/checkout", method: "post") do %>
+      <button>Checkout</button>
+    <% end %>
+
+  </div>
+</div>

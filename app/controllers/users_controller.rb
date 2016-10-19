@@ -1,7 +1,15 @@
+
+
 class UsersController < ApplicationController
-  def account
+  def cart
+    @products = current_user.cart
+    @products = @products.map { |product| Product.find(product) }
+    @cart_total = @products.sum { |product| product.price }
   end
 
-  def cart
+  def add_to_cart
+    current_user.cart << (params[:add_to_cart]).to_i
+    current_user.save
+    redirect_to "/cart"
   end
 end

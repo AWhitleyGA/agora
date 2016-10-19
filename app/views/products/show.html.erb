@@ -5,8 +5,14 @@
   <div class="product-info">
     <h3><%= @product.name %></h3>
     <p class="description"><%= @product.description %></p>
-    <p class="price">$<%= @product.price %></p>
-    <button>Add to Cart</button>
+    <p class="price"><%= number_to_currency(@product.price) %></p>
+
+    <%= form_tag("/cart", method: "post") do %>
+      <input type="hidden" name="add_to_cart" value="<%= @product.id %>">
+      <button>Add to Cart</button>
+    <% end %>
+
+
     <div class="seller-info">
       <h4>Seller Information</h4>
       <p><span>username:</span><%= @product.user.username %></p>

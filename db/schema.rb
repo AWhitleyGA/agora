@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20161018153935) do
     t.string   "billing_address_2",      default: "",    null: false
     t.string   "mailing_address_1",      default: "",    null: false
     t.string   "mailing_address_2",      default: "",    null: false
-    t.integer  "cart",                   default: [],    null: false, array: true
+    t.string   "cart",                   default: [],    null: false, array: true
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
