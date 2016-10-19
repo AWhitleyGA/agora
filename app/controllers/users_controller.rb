@@ -12,4 +12,10 @@ class UsersController < ApplicationController
     current_user.save
     redirect_to "/cart"
   end
+
+  def checkout
+    @products = current_user.cart
+    @products = @products.map { |product| Product.find(product) }
+    @cart_total = @products.sum { |product| product.price }
+  end
 end

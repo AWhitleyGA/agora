@@ -1,0 +1,64 @@
+<h1>Checkout</h1>
+<div class="checkout">
+  <div class="payment-info">
+    <h2>Enter Payment Information</h2>
+    <%= form_tag do %>
+      <div>
+        <%= label_tag "Credit Card No."%>
+        <%= text_field_tag :cc_number, nil, class:"form_field", id: "cc", maxlength: 16 %>
+      </div>
+      <div>
+        <%= label_tag "Expiration Mo." %>
+        <%= select_tag(:expiration_month, options_for_select(
+          [
+            ['1', 1],
+            ['2', 2],
+            ['3', 3],
+            ['4', 4],
+            ['5', 5],
+            ['6', 6],
+            ['7', 7],
+            ['8', 8],
+            ['9', 9],
+            ['10', 10],
+            ['11', 11],
+            ['12', 12],
+          ]
+        ))%>
+        <%= label_tag "Year" %>
+        <%= select_tag(:expiration_year, options_for_select(
+          [
+            ['08', 2008],
+            ['09', 2009],
+            ['10', 2010],
+            ['11', 2011],
+            ['12', 2012],
+            ['13', 2013],
+            ['14', 2014],
+            ['15', 2015],
+            ['16', 2016],
+          ]
+        ))%>
+      </div>
+      <div>
+        <%= label_tag "CVV Code" %>
+        <%= text_field_tag :cvv, nil, class: "form_field", id: 'cvv', maxlength: 3 %>
+      </div>
+      <h2>Confirm Billing Address</h2>
+      <div>
+        <%= text_field_tag :billing_address_1, current_user.billing_address_1, class: "form_field"%>
+      </div>
+      <div>
+        <%= text_field_tag :billing_address_2, current_user.billing_address_2, class: "form_field"%>
+      </div>
+      <button class="form_button">Place Order</button>
+    <% end %>
+  </div>
+  <div class="receipt">
+    <% @products.each do |product| %>
+      <p><span class="receipt-name"><%= product.name %></span><span class="receipt-price"><%= number_to_currency(product.price) %></span></p>
+    <% end %>
+    <p class="receipt-total"><%= number_to_currency(@cart_total) %></p>
+  </div>
+
+</div>

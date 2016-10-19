@@ -14,6 +14,7 @@ end
 get "/account" => "users#show"
 get "/cart" => "users#cart"
 post "/cart" => "users#add_to_cart"
+get "/checkout" => "users#checkout"
 root "home#index"
 
 end
