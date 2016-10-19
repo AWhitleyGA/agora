@@ -89,7 +89,7 @@
 }
 .form_button {
   display: block;
-  width: 120px;
+  width: 30%;
   height: 40px;
   background: red;
   margin: 30px auto;
@@ -100,6 +100,11 @@
   font-size: 1.2em;
   justify-content: center;
   align-items: center;
+}
+.bottom_center {
+  position: absolute;
+  left: 35%;
+  bottom: 0;
 }
 .sign-in-banner {
   width: 60%;
@@ -125,6 +130,7 @@
   flex-direction: column;
   justify-content: top;
   align-items: center;
+  position: relative;
   h2 {
     margin: 30px 0;
     font-size: 2.4em;
@@ -132,8 +138,9 @@
   }
   form {
     text-align: right;
+    text-transform: capitalize;
     width: 450px;
-    #user_username, #user_email, #user_password, #user_password_confirmation {
+    .form_field {
       width: 200px;
       height: 20px;
       margin: 10px 0;

@@ -1,30 +1,60 @@
 <div class="sign-up-wallpaper">
   <div class="sign-up-page">
-    <h2>Become a Member</h2>
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
-      <div class="field">
-        <%= f.label :username %>
-        <%= f.text_field :username, autofocus: true %>
+      <h2>Become a Member</h2>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <div class="sign-up-form-1" style="">
+        <%= devise_error_messages! %>
+        <div class="field">
+          <%= f.label :username %>
+          <%= f.text_field :username, autofocus: true, class: "form_field", placeholder: "jsmith22" %>
+        </div>
+        <div class="field">
+          <%= f.label :email %>
+          <%= f.email_field :email, autofocus: true, class: "form_field", placeholder: "jsmith@gmail.com" %>
+        </div>
+        <div class="field">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %>
+          <%= f.password_field :password, autocomplete: "off", class: "form_field", placeholder: "******" %>
+        </div>
+        <div class="field">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form_field", placeholder: "******" %>
+        </div>
+        <button class="form_button bottom_center" id="next_1" type="button">Next</button>
       </div>
-      <div class="field">
-        <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true %>
+      <div class="sign-up-form-2" style="display:none">
+        <div class="field">
+          <%= f.label "First Name" %>
+          <%= f.text_field :first_name, autofocus: true, class: "form_field", placeholder: "John" %>
+        </div>
+        <div class="field">
+          <%= f.label "Last Name" %>
+          <%= f.text_field :last_name, autofocus: true, class: "form_field", placeholder: "Smith" %>
+        </div>
+        <div class="field">
+          <%= f.label "Phone Number" %>
+          <%= f.telephone_field :phone_number, autofocus: true, class: "form_field", placeholder: "(xxx) xxx-xxxx" %>
+        </div>
+        <button class="form_button bottom_center" id="next_2" type="button">Next</button>
       </div>
-      <div class="field">
-        <%= f.label :password %>
-        <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %>
-        <%= f.password_field :password, autocomplete: "off" %>
+      <div class="sign-up-form-3" style="display:none">
+        <div class="field">
+          <%= f.label "Billing Address" %>
+          <%= f.text_field :billing_address_1, autofocus: true, class: "form_field", placeholder: "Street Address" %>
+          <%= f.text_field :billing_address_2, autofocus: true, class: "form_field", placeholder: "City, State ZIP" %>
+        </div>
+        <div class="field">
+          <%= f.label "Mailing Address" %>
+          <%= f.text_field :mailing_address_1, autofocus: true, class: "form_field", placeholder: "Street Address" %>
+          <%= f.text_field :mailing_address_2, autofocus: true, class: "form_field", placeholder: "City, State ZIP" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Sign up", class: "form_button bottom_center" %>
+        </div>
       </div>
-      <div class="field">
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
-      </div>
-      <div class="actions">
-        <%= f.submit "Sign up", class: "form_button" %>
-      </div>
-    <% end %>
+      <% end %>
   </div>
 </div>
