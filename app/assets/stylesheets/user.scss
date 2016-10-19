@@ -1,7 +1,6 @@
 .user-info {
   display: flex;
   justify-content: space-around;
-  background: pink;
   h1 {
     font-size: 2.2em;
     text-align: left;
@@ -15,7 +14,7 @@
   }
   div {
     width: 200px;
-    margin: 40px 0;
+    margin-bottom: 20px;
     line-height: 20px;
     span {
       display: inline-block;
@@ -26,20 +25,31 @@
     width: 300px;
   }
 }
+.user-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 35px;
+  margin: auto;
+  color: white;
+  background: red;
+  border: 1px solid black;
+  text-decoration: none;
 
+}
 .user-listings {
   height: 250px;
-  background: pink;
   overflow: scroll;
   display: flex;
   a {
     text-decoration: none;
     color: black;
     h3 {
-      text-align: center;
       padding: 0 20px;
       height: 30%;
       display: flex;
+      justify-content: center;
       align-items: center;
     }
     .listing-image {
