@@ -16,13 +16,15 @@
     <%= f.text_area :description, class: "" %>
   </div>
 </div>
-<h2>Categories</h2>
+<h2 class="categories-header">Categories</h2>
   <% @categories.each do |category| %>
     <div>
-      <%= label_tag "#{category.name}" %>
       <%= check_box_tag "#{category.id}"%>
+      <%= label_tag "#{category.name}" %>
     </div>
   <% end %>
 </div>
-<%= f.submit "Create Listing" %>
+<div class="update-listing-button-gallery">
+<%= f.submit "Create Listing", class: "update-listing-button" %>
 <% end %>
+</div>

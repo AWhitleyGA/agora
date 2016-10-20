@@ -16,17 +16,23 @@
     <%= f.text_area :description, value: @product.description %>
   </div>
 </div>
-<h2>Categories</h2>
+<h2 class="categories-header">Categories</h2>
   <% @categories.each do |category| %>
     <div>
-      <%= label_tag "#{category.name}" %>
       <% if @product.categories.include?(category) %>
         <%= check_box_tag "#{category.id}", nil, true%>
       <% else %>
         <%= check_box_tag "#{category.id}" %>
       <% end %>
+      <%= label_tag "#{category.name}" %>
     </div>
   <% end %>
 </div>
-<%= f.submit "Save Changes" %>
+<div class="update-listing-button-gallery">
+<%= f.submit "Save Changes", class: "update-listing-button" %>
 <% end %>
+
+<%= form_for [current_user, @product], method: :delete do |f| %>
+  <%= f.submit "Remove Listing", class: "update-listing-button" %>
+<% end %>
+</div>

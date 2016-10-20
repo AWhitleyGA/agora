@@ -50,6 +50,12 @@ class ProductsController < ApplicationController
     redirect_to user_product_path(current_user, @product)
   end
 
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    redirect_to user_path(current_user)
+  end
+
   private
 
   def product_params
