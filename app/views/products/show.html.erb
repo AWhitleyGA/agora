@@ -7,7 +7,7 @@
     <p class="description"><%= @product.description %></p>
     <p class="price"><%= number_to_currency(@product.price) %></p>
 
-    <%= form_tag("/cart", method: "post") do %>
+    <%= form_tag("/cart", method: "post", class: "add_to_cart_button") do %>
       <input type="hidden" name="add_to_cart" value="<%= @product.id %>">
       <button>Add to Cart</button>
     <% end %>
@@ -20,3 +20,11 @@
     </div>
   </div>
 </div>
+
+<% if current_user.products.include?(@product) %>
+  <div class="edit-listing-button">
+    <%= form_tag(edit_user_product_path(current_user, @product), method: "get") do %>
+      <button>Edit Listing</button>
+    <% end %>
+  </div>
+<% end %>

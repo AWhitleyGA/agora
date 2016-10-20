@@ -30,6 +30,26 @@ class ProductsController < ApplicationController
     redirect_to user_product_path(current_user, @product)
   end
 
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @product = Product.find(params[:id])
+    @product.update(product_params)
+    @tags = CategoryTag.where(product_id: @product.id)
+    @tags.destroy_all
+    @categories.each do |category|
+      if params.keys.include?(category.id.to_s)
+        CategoryTag.create(
+          product_id: @product.id,
+          category_id: category.id
+        )
+      end
+    end
+    redirect_to user_product_path(current_user, @product)
+  end
+
   private
 
   def product_params
