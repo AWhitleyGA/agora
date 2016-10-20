@@ -9,12 +9,4 @@ $(window).on('click', function(event) {
   }
 })
 
-
-
-
-
-
-
-
-
 })

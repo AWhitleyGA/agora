@@ -1,5 +1,3 @@
-
-
 class UsersController < ApplicationController
   def cart
     @products = current_user.cart
@@ -23,8 +21,5 @@ class UsersController < ApplicationController
     @products = current_user.cart
     @products = @products.map { |product| Product.find(product) }
     @cart_total = @products.sum { |product| product.price }
-
-    
-
   end
 end
