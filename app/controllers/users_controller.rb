@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+
   def cart
     @products = current_user.cart
     @products = @products.map { |product| Product.find(product) }

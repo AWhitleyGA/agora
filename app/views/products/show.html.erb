@@ -21,7 +21,7 @@
   </div>
 </div>
 
-<% if current_user.products.include?(@product) %>
+<% if current_user && current_user.products.include?(@product) %>
   <div class="edit-listing-button">
     <%= form_tag(edit_user_product_path(current_user, @product), method: "get") do %>
       <button>Edit Listing</button>
