@@ -21,7 +21,9 @@ class UsersController < ApplicationController
 
   def order
     @products = current_user.cart
-    @products = @products.map { |product| Product.find(product) }
-    @cart_total = @products.sum { |product| product.price }
+    @products.each { |product| Product.find(product).destroy }
+    current_user.cart.clear
+    current_user.save
+    redirect_to root_path
   end
 end
