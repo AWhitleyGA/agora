@@ -172,7 +172,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler
   byebug
   coffee-rails (~> 4.2)
   devise

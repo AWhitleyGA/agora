@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'bundler'
 #Pry for troubleshooting
 gem 'pry'
 # Use Devise for User Authentication
