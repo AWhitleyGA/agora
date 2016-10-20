@@ -59,3 +59,71 @@ nav > div{
   color: red;
   padding: 20px 20px;
 }
+
+.home-page {
+  height: 610px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+  }
+  a:hover {
+        color: rgba(255, 255, 255, 1);
+  }
+}
+.home-banner {
+  width: 100%;
+  height: 50%;
+  background: url('fall-fashion.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-size: 5.0em;
+    letter-spacing: 20px;
+  }
+}
+.home-gallery {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.featured-category-1 {
+  width: 48%;
+  height: 90%;
+  background: url('tech.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    font-size: 2.0em;
+    letter-spacing: 5px;
+  }
+}
+.featured-category-2 {
+  width: 48%;
+  height: 90%;
+  background: url('movies.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    font-size: 2.0em;
+    letter-spacing: 5px;
+  }
+}
