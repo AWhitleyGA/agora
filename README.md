@@ -1,7 +1,7 @@
 # AGORA
 *by Andrew Whitley*
 
-Agora is a web application for eCommerce where users can list and buy items. The application is built using Ruby on Rails for server-side delivery of data and views. It also makes use of JavaScript, JQuery, and SCSS for stlying and interactivity on the client-side. 
+Agora is a web application for eCommerce where users can list and buy items. The application is built using Ruby on Rails for server-side delivery of data and views. It also makes use of JavaScript, JQuery, and SCSS for stlying and interactivity on the client-side.
 
 ## Technologies Used
 
@@ -26,7 +26,7 @@ Agora is a web application for eCommerce where users can list and buy items. The
 
 ### Bronze Level (MVP)
 * User can view all products for sale, organized by category
-* User can add a listed product to their cart
+* User can list an item to sell
 * User can add a listed product to their cart
 * User can 'checkout' their cart to create an order for the products in their cart
 
