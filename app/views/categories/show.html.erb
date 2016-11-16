@@ -1,11 +1,8 @@
-<section class="category-banner">
+<section class="category-banner" style="background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) 60%),url('<%= image_path(@category.img_url) %>');background-size: cover; background-repeat: no-repeat; background-position: center right">
   <div class="category-info">
     <h3><%= @category.name %></h3>
     <p><%= @category.description %></p>
   </div>
-  <div class="category-image" style="background: url('<%= image_path(@category.img_url) %>');background-size: auto 100%; background-repeat: no-repeat; background-position: center">
-  </div>
-
 </section>
 <section class="product-gallery">
   <% @category.products.each do |product| %>

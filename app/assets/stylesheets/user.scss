@@ -44,7 +44,7 @@
   display: flex;
   a {
     text-decoration: none;
-    color: black;
+    color: rgba(0, 0, 0, 0.4);
     h3 {
       padding: 0 20px;
       height: 30%;
@@ -65,7 +65,7 @@
     }
   }
   a:hover {
-    color: red;
+    color: rgba(0, 0, 0, 1);
   }
 }
 
@@ -102,7 +102,7 @@
 }
 .form_button {
   display: block;
-  width: 30%;
+  width: 120px;
   height: 40px;
   background: red;
   margin: 30px auto;
@@ -110,9 +110,9 @@
   text-decoration: none;
   color: white;
   display: flex;
-  font-size: 1.2em;
   justify-content: center;
   align-items: center;
+  font: 1.2em Times;
 }
 .bottom_center {
   position: absolute;

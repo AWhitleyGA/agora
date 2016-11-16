@@ -1,6 +1,11 @@
 <h1>Cart</h1>
 <div class="cart">
   <div class="cart-products-gallery">
+    <% unless @products.length > 0 %>
+      <div class="empty">
+        empty
+      </div>
+    <% end %>
     <% @products.each do |product| %>
       <a href="<%= category_product_path(product.categories.first, product) %>" class="cart-product">
         <div class="cart-product-image" style="background: url('<%= image_path(product.img_url) %>'); background-size: contain; background-position: center; background-repeat: no-repeat;">

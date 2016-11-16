@@ -61,27 +61,24 @@ nav > div{
 }
 
 .home-page {
-  height: 610px;
-  margin-top: 40px;
+  height: 640px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   a {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 1);
     text-decoration: none;
-  }
-  a:hover {
-        color: rgba(255, 255, 255, 1);
   }
 }
 .home-banner {
   width: 100%;
   height: 50%;
-  background: url('fall-fashion.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('fall-fashion.jpg');
   background-size: cover;
   background-position: center;
-  border-radius: 40px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,6 +86,11 @@ nav > div{
     font-size: 5.0em;
     letter-spacing: 20px;
   }
+}
+.home-banner:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('fall-fashion.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .home-gallery {
   width: 100%;
@@ -98,12 +100,12 @@ nav > div{
   align-items: center;
 }
 .featured-category-1 {
-  width: 48%;
+  width: 49%;
   height: 90%;
-  background: url('tech.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('tech.jpg');
   background-size: cover;
   background-position: center;
-  border-radius: 40px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,13 +114,18 @@ nav > div{
     letter-spacing: 5px;
   }
 }
-.featured-category-2 {
-  width: 48%;
-  height: 90%;
-  background: url('movies.jpg');
+.featured-category-1:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('tech.jpg');
   background-size: cover;
   background-position: center;
-  border-radius: 40px;
+}
+.featured-category-2 {
+  width: 49%;
+  height: 90%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('movies.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,4 +133,9 @@ nav > div{
     font-size: 2.0em;
     letter-spacing: 5px;
   }
+}
+.featured-category-2:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('movies.jpg');
+  background-size: cover;
+  background-position: center;
 }
